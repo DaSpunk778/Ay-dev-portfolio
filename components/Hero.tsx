@@ -1,5 +1,5 @@
 import { cn } from "@/lib/utils";
-import { Button } from "@/components/ui/button";
+import { FaBeer, FaLocationArrow } from 'react-icons/fa';
 import { Spotlight } from "./ui/Spotlight";
 import { TextGenerateEffect } from "./ui/TextGenerateEffect";
 import MagicButton from "./ui/MagicButton";
@@ -42,11 +42,11 @@ const Hero = () => {
           </h2>
 
           <TextGenerateEffect
-            className="text-center text-[40px] md:text-5xl lg:text-6xl"
+            className="text-center text-[40px] md:text-5xl lg:text-5xl"
             words="Transforming Concepts and Ideas into seamless Web Experiences"
           />
 
-          <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl text-zinc-400">
+          <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-1xl text-zinc-400">
             Hi, I&apos;m Ayomide, a Next.js Developer based in Lagos, Nigeria.
           </p>
 
@@ -54,6 +54,8 @@ const Hero = () => {
           <a href="#about">
             <MagicButton 
             title="Show my work"
+            icon={<FaLocationArrow />}
+            position='right'
             />
           </a>
         </div>
