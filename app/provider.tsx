@@ -1,7 +1,8 @@
 "use client"
 
 import * as React from "react"
-import { ThemeProvider as NextThemesProvider } from "next-themes"
+// Import NextThemesProvider from the updated package instead
+import { ThemeProvider as NextThemesProvider } from '@teispace/next-themes'
 
 export function ThemeProvider({
   children,

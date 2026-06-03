@@ -2,7 +2,7 @@
 import { cn } from "@/lib/utils";
 import { BackgroundGradientAnimation } from "./GraidentBg";
 import {  GlobeDemo } from "./GridGlobe";
-import Lottie from "react-lottie";
+import Lottie from "lottie-react";
 import { useState } from "react";
 import animationData from '@/data/confetti.json';
 import { IoCopyOutline } from "react-icons/io5";
@@ -60,7 +60,7 @@ export const BentoGridItem = ({
   return (
     <div
       className={cn(
-        "shadow-input flex flex-col justify-between space-y-4 relative overflow-hidden rounded-3xl group/bento  bg-white  transition duration-200 hover:shadow-xl dark:border-white/[0.2] dark:bg-black dark:shadow-none border border-white/[0.1]",
+        "shadow-input flex flex-col bg-cover image-full justify-between space-y-4 relative overflow-hidden rounded-3xl group/bento  bg-white  transition duration-200 hover:shadow-xl dark:border-white/[0.2] dark:bg-black dark:shadow-none border border-white/[0.1]",
         className,
       )}
       style={{
@@ -151,14 +151,12 @@ export const BentoGridItem = ({
             <div className="mt-5 relative "> 
               <div className={`absolute -bottom-5 right-0`}>
                
-               <Lottie options={{
-                loop: copied,
-                autoplay: copied,
-                animationData,
-                rendererSettings: {
-                  preserveAspectRatio: 'xMidYMid slice',
-                }
-               }}/>
+               <Lottie
+                 animationData={animationData}
+                 loop={copied}
+                 autoplay={copied}
+                 style={{ width: 120, height: 120 }}
+               />
               </div>
 
               <MagicButton 

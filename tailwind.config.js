@@ -13,8 +13,15 @@ module.exports = {
       colors: {
         'custom-black': '#000319',
       },
+      keyframes: {
+        scroll: {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(-50%)' },
+        },
+      },
       animation: {
         spotlight: 'spotlight 2s ease 0.75s 1 forwards',
+        scroll: 'scroll var(--animation-duration, 15s) linear infinite',
       },
     },
   },
